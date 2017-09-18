@@ -31,6 +31,16 @@ app.use(function(req, res, next){
 });
 
 
+
+//app.use(function(req,res, next){
+
+//res.render("maintain.hbs", {pageTitle: "Maintan Page"})
+//next();
+
+//});
+
+
+
 //
 // app.use(function(req,res, next){
 //
@@ -58,11 +68,13 @@ res.render("about.hbs", {pageTitle: "About Page"})
 });
 
 
-app.use(function(req,res, next){
 
-res.render("maintain.hbs", {pageTitle: "Maintan Page"})
+app.get('/project', function(req,res){
+
+res.render("projects.hbs", {pageTitle: "Projects Page"})
 
 });
+
 
 
 
