@@ -2,6 +2,8 @@ const express = require('express');
 
 const fs =  require('fs');
 
+
+const port = process.env.PORT || 3000;
 const hbs = require('hbs');
 
 const g = new Date().get
@@ -100,7 +102,7 @@ res.send({ErrorMessage: "OOPs 404 Error Page"});
 });
 
 
-app.listen(3000, function()
+app.listen(port, function()
 {
-  console.log("Server is up on port 3000");
+  console.log("Server is up on port " + port );
 });
